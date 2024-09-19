@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mall 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+
+<!--HEADER SEKTION-->
+
+<body>
+
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="images/Aurora Städ.png" alt=""></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HEM</a></li>
+                    <li class="dropdown">
+                        <a href="#">TJÄNSTER <i class="fa fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="tjänster.html">HEMSTÄDNING</a></li>
+                            <li><a href="företag-tjänster.html">FÖRETAGSSTÄDNING</a></li>
+                            <li><a href="fönsterputs-tjänster.html">FÖNSTERPUTS</a></li>
+                            <li><a href="extra-tjänster.html">EXTRATJÄNSTER</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li><a href="about.html">OM OSS</a></li>
+                    <li><a href="contact.html">KONTAKTA OSS</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Extratjänster</h1>
+
+    </section>
+
+<!--TJÄNSTER-->
+
+<section class="course1">
+
+    <div class="row1">
+
+        <div class="course-col1"  data-aos="fade-in">
+            <h3>Extra tjänster</h3>
+            <ul>
+                <li><p><strong>Strykning av kläder:</strong> Professionell strykning av skjortor, blusar och andra plagg för att hålla dem släta och prydliga.</p></li>
+                <li><p><strong>Inköp:</strong> Vi hjälper dig med att handla matvaror och andra nödvändigheter, så att du slipper ta dig till affären själv.</p></li>
+                <li><p><strong>Byte av gardiner:</strong> Säsongsbyte eller uppfräschning av gardiner, inklusive nedtagning, upphängning och tvätt vid behov.</p></li>
+                <li><p><strong>Byte av sängkläder:</strong> Regelbundet byte av lakan, påslakan och örngott för att hålla ditt sovrum fräscht och bekvämt.</p></li>
+                <li><p><strong>Djupgående dammsugning av mattor och madrasser:</strong> Effektiv dammsugning som tar bort damm, smuts och allergener. Detta är särskilt viktigt för personer som lider av allergier, eftersom det minskar mängden kvalster och damm i hemmet.</p></li>
+            </ul>
+            
+            
+
+        </div>
+
+     <a href="contact.html"><div class="hero-btn2">KONTAKTA OSS</div></a>
+    </section>
+
+    <!--FOOTER SEKTION-->
+
+    <section class="footer">
+
+        <div class="icons">
+            <i class="fa fa-instagram"></i>
+
+        </div>
+        <p>Made by &copy <a href="zolveuf.se">Zolve UF</a> 2024</p>
+    </section>
+
+    <!--JAVASCRIPT FÖR MENY-->
+
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+        var body = document.body;
+        
+        function showMenu() {
+            navLinks.style.right = "0";
+            body.classList.add("no-scroll"); // Lägg till klass för att förhindra scroll
+        }
+        
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+            body.classList.remove("no-scroll"); // Ta bort klass för att återställa scroll
+        }
+        
+        
+        
+            </script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+AOS.init();
+</script>
+    
+</body>
+
+</html>
