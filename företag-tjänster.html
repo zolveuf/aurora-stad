@@ -182,11 +182,34 @@
         }
         
             </script>
-
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-AOS.init();
-</script>
+        
+            <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+            <script>
+            AOS.init();
+            </script>
+        
+        <script>
+        var navLinks = document.getElementById("navLinks");
+        var body = document.body;
+        var dropdownToggle = document.getElementById("dropdown-toggle");
+        var dropdownMenu = document.querySelector(".dropdown-menu");
+        
+        function showMenu() {
+            navLinks.style.right = "0";
+            body.classList.add("no-scroll"); // Prevent scrolling
+        }
+        
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+            body.classList.remove("no-scroll"); // Re-enable scrolling
+        }
+        
+        // Toggle the dropdown menu in mobile view
+        dropdownToggle.addEventListener("click", function(e) {
+            e.preventDefault(); // Prevent the default link behavior
+            dropdownMenu.classList.toggle("active"); // Toggle the visibility of the dropdown
+        });
+        </script>
     
 </body>
 

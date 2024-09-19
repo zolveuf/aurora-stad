@@ -32,7 +32,7 @@
                 <ul>
                     <li><a href="index.html">HEM</a></li>
                     <li class="dropdown">
-                        <a href="#">TJÄNSTER <i class="fa fa-chevron-down"></i></a>
+                        <a href="#" id="dropdown-toggle">TJÄNSTER <i class="fa fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="tjänster.html">HEMSTÄDNING</a></li>
                             <li><a href="företag-tjänster.html">FÖRETAGSSTÄDNING</a></li>
@@ -51,7 +51,7 @@
         <div class="text-box">
             <h1>Städning i Ljungby!</h1>
             <p>Vi strävar efter att vara bäst, inte störst. Kvalitet och omsorg i varje detalj är vårt löfte.</p>
-            <a href="contact.html" class="hero-btn">KONTAKTA OSS</a>
+            <a href="contact.html" class="hero-btn">BOKA HÄR!</a>
         </div>
     </section>
     
@@ -267,6 +267,29 @@ function hideMenu() {
     <script>
     AOS.init();
     </script>
+
+<script>
+var navLinks = document.getElementById("navLinks");
+var body = document.body;
+var dropdownToggle = document.getElementById("dropdown-toggle");
+var dropdownMenu = document.querySelector(".dropdown-menu");
+
+function showMenu() {
+    navLinks.style.right = "0";
+    body.classList.add("no-scroll"); // Prevent scrolling
+}
+
+function hideMenu() {
+    navLinks.style.right = "-200px";
+    body.classList.remove("no-scroll"); // Re-enable scrolling
+}
+
+// Toggle the dropdown menu in mobile view
+dropdownToggle.addEventListener("click", function(e) {
+    e.preventDefault(); // Prevent the default link behavior
+    dropdownMenu.classList.toggle("active"); // Toggle the visibility of the dropdown
+});
+</script>
     
 </body>
 
