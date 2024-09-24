@@ -442,6 +442,7 @@ h1 {
 
 .about-col p {
     padding: 15px 0 25px;
+    line-height: 30px;
 }
 
 .red-btn {
