@@ -21,12 +21,16 @@ window.addEventListener('scroll', function() {
 document.addEventListener('DOMContentLoaded', function() {
     const dropdownToggle = document.getElementById('dropdown-toggle');
     const dropdownMenu = document.querySelector('.dropdown-menu');
+    const dropdown = document.querySelector('.dropdown');
 
     // Check if the element exists
     if (dropdownToggle) {
         // Toggle dropdown menu on click
         dropdownToggle.addEventListener('click', function(event) {
             event.preventDefault(); // Prevent the default action
+
+            // Toggle the active class on dropdown
+            dropdown.classList.toggle('active');
 
             // Check if dropdown menu is open
             if (dropdownMenu.style.display === 'block') {

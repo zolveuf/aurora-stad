@@ -375,7 +375,7 @@ h1 {
     transition: 0.5s;
 }
 .course-col1 p{
-    line-height: 10px;
+    line-height: 15px;
 }
 .course-col1 h2{
     font-size: 25px;
@@ -652,7 +652,7 @@ nav img {
         text-align: left;
         font-size: 14px;
         font-weight: 400;
-        line-height: 2vh;
+        line-height: 15px;
         padding: 10px;
     }
     
@@ -903,6 +903,16 @@ nav img {
     top: 100%; 
     left: 0;
 }
+.arrow {
+    font-size: 0.8em; 
+    margin-left: 5px;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.dropdown.active .arrow {
+    transform: rotate(180deg); /* Rotate arrow when menu is open */
+}
 
 .dropdown-menu li {
     list-style: none;
@@ -961,10 +971,10 @@ nav img {
     }
 
     .nav-links .dropdown-menu {
-        width: 70%;
+        width: 85%;
         position: static;
         box-shadow: none;
-        background-color: var(--color1);
+        background-color: var(--color2);
     }
 
     .nav-links .dropdown-menu li {
@@ -977,6 +987,8 @@ nav img {
         margin-left: -25px;
     }
 }
+
+
 
 
 
