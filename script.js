@@ -17,3 +17,23 @@ window.addEventListener('scroll', function() {
 
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdownToggle = document.getElementById('dropdown-toggle');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+
+    // Check if the element exists
+    if (dropdownToggle) {
+        // Toggle dropdown menu on click
+        dropdownToggle.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default action
+
+            // Check if dropdown menu is open
+            if (dropdownMenu.style.display === 'block') {
+                dropdownMenu.style.display = 'none';
+            } else {
+                dropdownMenu.style.display = 'block';
+            }
+        });
+    }
+});
