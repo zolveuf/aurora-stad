@@ -190,7 +190,76 @@ h3{
     color: #fff;
 }
 
-/*BUDSKAP SEKTION*/
+.campus {
+    width: 100%;
+    padding: 5rem 0;
+    text-align: center;
+    background: url('images/background.jpg') no-repeat center center/cover;
+}
+
+.campus p {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    font-style: italic;
+}
+
+.campus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 80%;
+    margin: auto;
+}
+
+.campus-col {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.campus-col:hover {
+    transform: scale(1.05);
+}
+
+.campus-col img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+    transition: filter 0.3s ease;
+}
+
+.campus-col:hover img {
+    filter: brightness(70%);
+}
+
+.layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.campus-col:hover .layer {
+    opacity: 1;
+}
+
+.layer h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color1);
+    text-transform: uppercase;
+}
+
+/*BUDSKAP SEKTION
 
 .campus {
     width: 80%;
@@ -240,7 +309,7 @@ h3{
     transition: 0.5s;
 }
 
-/*KUNDER SEKTION*/
+KUNDER SEKTION*/
 
 .testimonial {
     width: 80%;
@@ -672,7 +741,7 @@ nav img {
         flex-direction: column;
     }
     
-    .course-col, .campus-col, .testimonial-col {
+    .course-col, .testimonial-col {
         flex-basis: 100%;
         margin-bottom: 20px;
     }
@@ -690,57 +759,7 @@ nav img {
         line-height: 5px;
     }
 
-.campus {
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 50px;
-}
 
-.campus-col {
-    flex-basis: 32%;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    position: relative;
-    overflow: hidden;
-}
-.campus-col img {
-    width: 100%;
-    display: block;
-    height: 200px;
-}
-
-.layer {
-    background: transparent;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: 0.5s;
-    background: var(--color1);
-}
-
-.layer h3 {
-    width: 100%;
-    font-weight: 700;
-    color: white;
-    font-size: 30px;
-    bottom: 75px;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-}
-.layer:hover h3 {
-    width: 100%;
-    font-weight: 500;
-    color: white;
-    font-size: 26px;
-    bottom: 75px;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-}
 
     html, body {
         overflow-x: hidden;
@@ -777,12 +796,6 @@ nav img {
     transition: filter 0.3s cubic-bezier(0.499, .05, .55, .95), transform 0.3s cubic-bezier(0.499, .05, .55, .95);
     will-change: filter, transform;
     display: block;
-}
-
-.box img:hover {
-    filter: brightness(90%);
-    transform: scale(1.04);
-    cursor: pointer;
 }
 
 .box h4{
@@ -845,11 +858,6 @@ nav img {
     color: #fff;
 }
 
-.box img:hover {
-    filter: brightness(90%);
-    transform: scale(1.04);
-    cursor: pointer;
-}
 
 .center-btn {
     text-align: center;
