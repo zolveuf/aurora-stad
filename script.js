@@ -1,43 +1,29 @@
-let lastScrollTop = 0; // Variable to store the last scroll position
-
-window.addEventListener('scroll', function() {
-    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-    
-    // Check if the user is scrolling down
-    if (currentScroll > lastScrollTop) {
-        // Trigger AOS animations when scrolling down
-        AOS.init({
-            disable: false // Ensures AOS is enabled when scrolling down
-        });
-    } else {
-        AOS.init({
-            disable: true
-        });
+document.addEventListener('DOMContentLoaded', function() {
+    // Safe AOS init (runs only if AOS is available)
+    if (window.AOS && typeof window.AOS.init === 'function') {
+        window.AOS.init();
     }
 
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
-});
+    // Mobile menu controls
+    var navLinks = document.getElementById('navLinks');
+    window.showMenu = function() {
+        if (!navLinks) return;
+        navLinks.style.right = '0';
+        document.body.classList.add('no-scroll');
+    };
+    window.hideMenu = function() {
+        if (!navLinks) return;
+        navLinks.style.right = '-200px';
+        document.body.classList.remove('no-scroll');
+    };
 
-document.addEventListener('DOMContentLoaded', function() {
-    const dropdownToggle = document.getElementById('dropdown-toggle');
-    const dropdownMenu = document.querySelector('.dropdown-menu');
-    const dropdown = document.querySelector('.dropdown');
-
-    // Check if the element exists
-    if (dropdownToggle) {
-        // Toggle dropdown menu on click
+    // Dropdown toggle (class-based; CSS controls visibility)
+    var dropdownToggle = document.getElementById('dropdown-toggle');
+    var dropdown = document.querySelector('.dropdown');
+    if (dropdownToggle && dropdown) {
         dropdownToggle.addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent the default action
-
-            // Toggle the active class on dropdown
+            event.preventDefault();
             dropdown.classList.toggle('active');
-
-            // Check if dropdown menu is open
-            if (dropdownMenu.style.display === 'block') {
-                dropdownMenu.style.display = 'none';
-            } else {
-                dropdownMenu.style.display = 'block';
-            }
         });
     }
 });

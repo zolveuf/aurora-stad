@@ -7,6 +7,7 @@
 html{
     scroll-behavior: smooth;
 }
+
 img{
     border-radius: 10px;
 }
@@ -259,57 +260,7 @@ h3{
     text-transform: uppercase;
 }
 
-/*BUDSKAP SEKTION
-
-.campus {
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 5rem;
-}
-
-.campus-col {
-    flex-basis: 32%;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    margin-top: 0px;
-    position: relative;
-    overflow: hidden;
-}
-
-.campus-col img {
-    width: 100%;
-    display: block;
-    filter: brightness(0%);
-}
-
-.layer {
-    background: transparent;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: 0.5s;
-    background: var(--color1);
-}
-.layer h3{
-    bottom: 49%;
-    opacity: 1;
-    color: #fff;
-}
-.layer h3 {
-    width: 100%;
-    font-weight: 700;
-    font-size: 30px;
-    bottom: 49%;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-    transition: 0.5s;
-}
-
-KUNDER SEKTION*/
+/* Removed outdated commented block */
 
 .testimonial {
     width: 80%;
@@ -622,12 +573,6 @@ h1 {
 
 /*INFINITY ROLLING LOGOS*/
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 nav img {
     width: 190px;
     padding: 10px 10px;
@@ -767,64 +712,6 @@ nav img {
 
 }
 
-.tre{
-    padding: 0 2rem; 
-}
-.tre h1{
-    text-align: center;
-    padding-top: 5rem;
-}
-.tre p{
-    text-align: center;
-}
-.tre-content{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-    align-items: center;
-    gap: 2rem;
-    padding-top: 3rem;
-}
-.box{
-    position: relative;
-}
-.box img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px;
-    filter: brightness(70%);
-    transition: filter 0.3s cubic-bezier(0.499, .05, .55, .95), transform 0.3s cubic-bezier(0.499, .05, .55, .95);
-    will-change: filter, transform;
-    display: block;
-}
-
-.box h4{
-    position: absolute;
-    left: 25px;
-    bottom: 65px;
-    font-size: 20px;
-    font-weight: 700;
-    color: #fff; 
-}
-
-.center-btn{
-    text-align: center;
-    margin-top: 4rem;
-}
-
-.center-text{
-    text-align: center;
-}
-.center-text h2{
-    font-size: var(--h2-font);
-    font-weight: 800;
-}
-
-.tre {
-    width: 80%;
-    margin: auto;
-}
-
 .tre-content {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Four columns for larger screens */
@@ -911,6 +798,7 @@ nav img {
     top: 100%; 
     left: 0;
 }
+.dropdown.active .dropdown-menu { display: block; }
 .arrow {
     font-size: 0.8em; 
     margin-left: 5px;
@@ -997,6 +885,10 @@ nav img {
 }
 
 
+h1, h2 {
+    font-family: 'Playfair', serif;
+    font-weight: 800;
+}
 
 
 
